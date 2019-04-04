@@ -1,1 +1,34 @@
-Raw Notes
+Amsterdam Community Day - Automate Lead Conversion – April 4, 2019
+
+Problem: 
+•	Today converting a lead to an Account/Donor/Contact/Student is very manual. Salesforce core considers an actual salesperson that is doing the conversion.
+•	In Fundraising it is small values, high volume of donations. It is a very automated process but Salesforce Lead conversion is not automating. 
+o	Look up leads, convert it to Contact/Household, and create Opportunity (for gift). 
+
+
+Notes:
+•	Do we need to search current contacts first? – Yes 
+•	At times leads need to fall back – as in the school’s program is full and they need to fall back and wait. 
+•	Dutch student model:
+o	Attention  Interest  Urgency  Action
+
+•	What triggers a lead conversion should be configurable. 
+o	What IS a Lead?
+o	Where in the Lead process do you want to flip?
+•	Trigger lead directly by flow or API
+
+
+Triggers/Settings, functionality that you would set on your automation dashboard –keep it aligned with process builder. 
+
+Post conversion actions - what happens after the lead is converted. 
+Would be nice to have an API call to have a direct conversion.
+
+MVP - Interface/possibilities/initial settings / 
+Decision: What is your conversion criteria 
+SOQL Query as criteria: e.g. All Leads value = 2
+One checkbox - Convert or a whole lead-scoring criteria list
+Or a direct Trigger - API call to convert it. Example, a Donation page is making the call. For Education it would be filling out an application form, visit a campus tour, or anything. 
+
+We need to find away to keep the custom parts (forms, API, etc.) from the core functionality. 
+There is a definable action (customer picks) that is set.
+There needs to be an initial query to search for existing contacts or leads that match, before converting the lead. 
